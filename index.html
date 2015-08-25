@@ -1,56 +1,138 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Boutiques.GitHub.io by boutiques</title>
+	<head>
+		<title>boutiques: A cross-platform application repository for science gateways</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <img src="images/logo.png" heigth="20" alt="logo"/>
-        <p>A cross-platform application repository for science gateways.</p>
+		<!-- Header -->
+			<header id="header">
 
-        <p class="view"><a href="https://github.com/boutiques">GitHub repositories</a></p>
+				<!-- Logo -->
+					<h1 id="logo"><img src="./images/logo.png" width="15" height="15" /> boutiques</h1>
 
-      </header>
-      <section>
-        <h3>
-          <a id="summary" class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h3>
-        <p>
-          Porting applications to science gateways is a critical step to
-          enable their execution on distributed computing infrastructures
-          and their sharing among scientific communities.  However,
-          application porting remains a costly human effort that consists of
-          1) installing the application on the target execution platform, 2)
-          describing the application in a format compatible with the science
-          gateway, and 3) generating proper user interfaces. Due to the
-          variety of science gateways, application porting efforts are often
-          replicated several times while mutualization would save cost and
-          improve the quality of the ported applications. Boutiques is
-          an application repository that allows automatic import
-          and exchange of applications in science gateways. Compared to
-          previous initiatives, our repository relies on Linux containers to
-          solve the problem of application installation in a lightweight
-          manner. In addition, it adopts a flexible application description
-          format which is versatile enough to be used in various science
-          gateways. We demonstrate the relevance of boutiques by describing
-          11 applications from the epigenetics and neuroimaging domains, and
-          by importing them in the Pegasus WMS, CBRAIN, and VIP science
-          gateways automatically and at a reduced human cost
-        </p>
-        <h3>
-          <a id="examples" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
-        <ol>
-          <li><a href="http://github.com/glatard/boutiques-nipype-fsl">boutiques-nipype-fsl</a>: Boutiques descriptors for Nipype FSL interfaces.</li>
-          <li><a href="http://github.com/glatard/boutiques-niak">boutiques-niak</a>: Boutiques descriptors for Niak pipelines.</li>
-        </ol>
-  </body>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#download">Download</a></li>
+							<li><a href="#docs">Documentation</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+
+			</header>
+
+		<!-- Home -->
+			<section id="home" class="main style1 dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<img src="./images/logo.png" />
+						<h2>boutiques</h2>
+					</header>
+					<p>A cross-platform application repository for science gateways</p>
+					<footer>
+						<a href="#about" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- About -->
+			<section id="about" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>About</h2>
+					</header>
+					<p><span style="font-size: 0.8em">Porting applications to science gateways is a critical step to enable their execution on distributed computing infrastructures and their sharing among scientific communities. However, application porting remains a costly human effort that consists of 1) installing the application on the target execution platform, 2) describing the application in a format compatible with the science gateway, and 3) generating proper user interfaces. Due to the variety of science gateways, application porting efforts are often replicated several times while mutualization would save cost and improve the quality of the ported applications. <strong>Boutiques</strong> is an application repository that allows automatic import and exchange of applications in science gateways. Compared to previous initiatives, our repository relies on Linux containers to solve the problem of application installation in a lightweight manner. In addition, it adopts a flexible application description format which is versatile enough to be used in various science gateways. We demonstrate the relevance of boutiques by describing 11 applications from the epigenetics and neuroimaging domains, and by importing them in the Pegasus WMS, CBRAIN, and VIP science gateways automatically and at a reduced human cost.</span></p>
+				</div>
+				<a href="#download" class="button style2 down anchored">Next</a>
+			</section>
+			
+		<!-- Download -->
+			<section id="download" class="main style3 fullscreen">
+				<div class="box container">
+					<header>
+						<p>Download <strong>boutiques</strong> JSON schema</p>
+					</header>
+					<a href="https://raw.githubusercontent.com/boutiques/schema/master/descriptor.schema.json" target="_blank"><p class="button">descriptor.schema.json - Version 0.2</p></a>
+				</div>
+				<a href="#docs" class="button style2 down anchored">More</a>
+			</section>
+
+		<!-- Documentation -->
+			<section id="docs" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2>Documentation</h2>
+						<p>&nbsp;</p>
+						 <iframe id="frame" src="docs.html" style="width: 90%"></iframe> 
+						 <script type="text/javascript">
+							function resizeIframe() {
+							    var height = document.documentElement.clientHeight;
+							    height -= document.getElementById('frame').offsetTop;
+							    height -= 200;
+							    document.getElementById('frame').style.height = height +"px";    
+							};
+							document.getElementById('frame').onload = resizeIframe;
+							window.onresize = resizeIframe;
+						</script>
+					</header>
+				</div>
+				<a href="#contact" class="button style2 down anchored">More</a>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2>Get Involved</h2>
+					</header>
+					<div class="box container 75%">
+						<p><strong>boutiques</strong> schema and tools are an open-source software available on the project GitHub repositories:</p>
+						<a href="https://github.com/boutiques" target="_blank"><span class="button">https://github.com/boutiques</span></a>
+						<p>&nbsp;</p>
+						<p>Requests can be performed from the Issues track page of each project.</p>
+
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="actions">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy;2015 Boutiques</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>boutiques: A cross-platform application repository for science gateways</title>
+		<title>boutiques: A cross-platform application repository for data analysis platforms</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -22,8 +22,10 @@
 						<ul>
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
-							<li><a href="#download">Download</a></li>
-							<li><a href="#docs">Documentation</a></li>
+                                                        <li><a href="#overview">Overview</a></li>
+							<li><a href="#tools">Tools</a></li>
+							<li><a href="#spec">Specification</a></li>
+                                                        <li><a href="#examples">Examples</a></li>
 							<li><a href="#users">Who is using?</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
@@ -38,7 +40,7 @@
 						<img src="./images/logo.png" />
 						<h2>boutiques</h2>
 					</header>
-					<p>A cross-platform application repository for science gateways</p>
+					<p>A cross-platform application repository for data-analysis platforms</p>
 					<footer>
 						<a href="#about" class="button style2 down">More</a>
 					</footer>
@@ -51,53 +53,71 @@
 					<header>
 						<h2>About</h2>
 					</header>
-					<p><span style="font-size: 0.8em">Porting applications to science gateways is a critical step to enable their execution on distributed computing infrastructures and their sharing among scientific communities. However, application porting remains a costly human effort that consists of 1) installing the application on the target execution platform, 2) describing the application in a format compatible with the science gateway, and 3) generating proper user interfaces. Due to the variety of science gateways, application porting efforts are often replicated several times while mutualization would save cost and improve the quality of the ported applications. <strong>Boutiques</strong> is an application repository that allows automatic import and exchange of applications in science gateways. Compared to previous initiatives, our repository relies on Linux containers to solve the problem of application installation in a lightweight manner. In addition, it adopts a flexible application description format which is versatile enough to be used in various science gateways. We demonstrate the relevance of boutiques by describing 11 applications from the epigenetics and neuroimaging domains, and by importing them in the Pegasus WMS, CBRAIN, and VIP science gateways automatically and at a reduced human cost.</span></p>
-					<p style="font-size: 0.7em">
-						<strong>Examples:</strong><br />
-						<a href="http://github.com/glatard/boutiques-nipype-fsl" style="color: #666666" target="_blank">boutiques-nipype-fsl</a>: a repository of Boutiques descriptors for Nipype interfaces to FSL.<br />
-						<a href="http://github.com/glatard/boutiques-niak" style="color: #666666" target="_blank">boutiques-niak</a>: Boutiques descriptors for Niak pipelines.
-					</p>
+					<p><span style="font-size: 0.8em">Porting applications to data-analysis platforms such as web portals, workflow systems and high-performance computing frameworks is a costly human effort that consists of 1) installing the application on the target execution platform, 2) describing the application in a format compatible with the platform, and 3) generating proper user interfaces. Due to the variety of processing environments, application porting efforts are often replicated several times while their mutualization would save cost, improve the quality of the ported applications and facilitate interoperability. <strong>Boutiques</strong> is an application repository that allows automatic import and exchange of applications in data analysis platforms. It relies on Linux containers to solve the problem of application installation in a lightweight manner and it uses a versatile JSON format to describe command line tools.</span></p>
 				</div>
-				<a href="#download" class="button style2 down anchored">Next</a>
-			</section>
-			
-		<!-- Download -->
-			<section id="download" class="main style3 fullscreen">
-				<div class="box container">
-					<header>
-						<p>Download <strong>boutiques</strong> JSON schema:</p>
-					</header>
-					<a href="https://raw.githubusercontent.com/boutiques/schema/master/descriptor.schema.json" target="_blank"><p class="button">descriptor.schema.json - Version 0.2</p></a>
-					<p>&nbsp;</p>
-					<p>Also, check some <i>tools</i> to create and use <strong>boutiques</strong> descriptors:</p>
-					<a href="https://github.com/boutiques/tools" target="_blank"><p class="button">https://github.com/boutiques/tools</p></a>
-				</div>
-				<a href="#docs" class="button style2 down anchored">More</a>
+				<a href="#overview" class="button style2 down anchored">Next</a>
 			</section>
 
-		<!-- Documentation -->
-			<section id="docs" class="main style3 primary">
-				<div class="content container">
-					<header>
-						<h2>Documentation</h2>
-						<p>&nbsp;</p>
-						 <iframe id="frame" src="docs.html" style="width: 90%"></iframe> 
-						 <script type="text/javascript">
-							function resizeIframe() {
-							    var height = document.documentElement.clientHeight;
-							    height -= document.getElementById('frame').offsetTop;
-							    height -= 200;
-							    document.getElementById('frame').style.height = height +"px";    
-							};
-							document.getElementById('frame').onload = resizeIframe;
-							window.onresize = resizeIframe;
-						</script>
-					</header>
-				</div>
-				<a href="#users" class="button style2 down anchored">More</a>
-			</section>
-			
-		<!-- Users -->
+                        <!-- Overview -->
+                        <section id="overview" class="main style3 fullscreen">
+                          <div class="box container">
+                            <header>
+			      <h2>Overview</h2>
+			    </header>
+                            <img src="images/overview.jpg" alt="overview diagram"/>
+                          </div>
+		          <a href="#tools" class="button style2 down anchored">More</a>
+		        </section>
+
+                        
+                        <!-- Tools -->
+                        <section id="tools" class="main style3 fullscreen">
+		          <div class="box container">
+                            <header>
+			      <h2>Tools</h2>
+			    </header>
+		            <p>Describe command-line applications with <strong>boutiques</strong>:</p>
+		            <a href="./json-editor/json-editor.html" target="_blank"><p class="button">JSON editor</p></a>
+                            <p>Export Nipype interfaces to <strong>boutiques</strong>:</p>
+                            <a href="https://github.com/nipy/nipype/tree/master/bin"><p class="button">nipype2boutiques</p></a>
+                            <p>&nbsp;</p>
+		            <p>Integrate <strong>boutiques</strong> descriptors in:</p>
+                            <a href="http://cbrain.mcgill.ca" target="_blank"><p class="button">CBRAIN (from version 4.2.0)</p></a>
+                            <a href="http://www.creatis.insa-lyon.fr/vip" target="_blank"><p class="button">VIP (from version 1.16)</p></a>
+		            <a href="https://github.com/boutiques/tools" target="_blank"> <p class="button">Pegasus (with pegasus-boutiques)</p></a>
+                          </div>
+		          <a href="#spec" class="button style2 down anchored">More</a>
+		        </section>
+                        
+		        <!-- Specification -->
+                        <section id="spec" class="main style3 fullscreen">
+		          <div class="box container">
+                            <header>
+			      <h2>Specification</h2>
+			    </header>
+		            <p>Download current <strong>boutiques</strong> JSON schema:</p>
+		            <a href="https://raw.githubusercontent.com/boutiques/schema/master/descriptor.schema.json" target="_blank"><p class="button">descriptor.schema.json - Version 0.2</p></a>
+		            <p>&nbsp;</p>
+                            <p>Check documentation:</p>
+		            <a href="https://github.com/boutiques/schema" target="_blank"><p class="button">https://github.com/boutiques/schema</p></a>
+		          </div>
+		          <a href="#examples" class="button style2 down anchored">More</a>
+		        </section>
+
+		        <!-- Examples -->
+                        <section id="examples" class="main style3">
+		          <div class="box container">
+                            <header>
+			      <h2>Examples</h2>
+			    </header>
+			<a href="http://github.com/glatard/boutiques-niak" style="color: #666666" target="_blank"><p class="button">Niak pipelines</p></a><br/>
+                        <a href="http://github.com/glatard/boutiques-nipype-fsl" style="color: #666666" target="_blank"><p class="button">FSL Nipype interfaces</p></a>
+		          </div>
+		          <a href="#users" class="button style2 down anchored">More</a>
+		        </section>
+                        
+                        
+		        <!-- Users -->
 			<section id="users" class="main style3 fullscreen">
 				<div class="box container">
 					<header>

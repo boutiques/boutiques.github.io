@@ -1,0 +1,20 @@
+
+**create**
+==========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_create
+    :prog: bosh create
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.create(\*params):
+   Refer to the `Command-line tool`_ section above

@@ -1,0 +1,20 @@
+
+**test**
+========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_test
+    :prog: bosh test
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.test(\*params):
+   Refer to the `Command-line tool`_ section above

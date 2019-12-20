@@ -1,0 +1,44 @@
+
+**data**
+========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_data
+    :prog: bosh data
+
+**data delete**
+---------------
+
+.. argparse::
+    :module: bosh
+    :func: parser_dataDelete
+    :prog: bosh data delete
+
+**data inspect**
+----------------
+
+.. argparse::
+    :module: bosh
+    :func: parser_dataInspect
+    :prog: bosh data inspect
+
+**data publish**
+----------------
+
+.. argparse::
+    :module: bosh
+    :func: parser_dataPublish
+    :prog: bosh data publish
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.data(\*params):
+   Refer to the `Command-line tool`_ section above

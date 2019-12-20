@@ -1,0 +1,20 @@
+
+**search**
+==========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_search
+    :prog: bosh search
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.search(\*params):
+   Refer to the `Command-line tool`_ section above

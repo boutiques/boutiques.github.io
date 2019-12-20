@@ -1,0 +1,20 @@
+
+**publish**
+===========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_publish
+    :prog: bosh publish
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.publish(\*params):
+   Refer to the `Command-line tool`_ section above

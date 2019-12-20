@@ -1,0 +1,20 @@
+
+**pprint**
+==========
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_pprint
+    :prog: bosh pprint
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.pprint(\*params):
+   Refer to the `Command-line tool`_ section above

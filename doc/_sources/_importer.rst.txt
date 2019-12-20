@@ -1,0 +1,20 @@
+
+**importer**
+============
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_importer
+    :prog: bosh importer
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.importer(\*params):
+   Refer to the `Command-line tool`_ section above

@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -85,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="_bosh.html"><strong>bosh</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_create.html"><strong>create</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_data.html"><strong>data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="_deprecate.html"><strong>deprecate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_evaluate.html"><strong>evaluate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_example.html"><strong>example</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>execute</strong></a><ul>
@@ -213,8 +214,8 @@
 <h3><strong>execute launch</strong><a class="headerlink" href="#execute-launch" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">launch</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VOLUMES</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span>
                            <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">collection</span><span class="p">]</span>
-                           <span class="p">[</span><span class="o">--</span><span class="n">provenance</span> <span class="n">PROVENANCE</span><span class="p">]</span>
-                           <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">docker</span> <span class="o">|</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">singularity</span><span class="p">]</span>
+                           <span class="p">[</span><span class="o">--</span><span class="n">provenance</span> <span class="n">PROVENANCE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">container</span><span class="p">]</span>
+                           <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">docker</span> <span class="o">|</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">singularity</span><span class="p">]</span>
                            <span class="n">descriptor</span> <span class="n">invocation</span>
 </pre></div>
 </div>
@@ -257,6 +258,14 @@
 <dt><kbd>--provenance</kbd></dt>
 <dd><p>Append JSON object to the generated record.</p>
 </dd>
+<dt><kbd>--no-container</kbd></dt>
+<dd><p>Launch invocation on the host computer, with no container. If ‘container-image’ appears in the descriptor, it is ignored.</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--sandbox</kbd></dt>
+<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
+<p>Default: False</p>
+</dd>
 <dt><kbd>--force-docker</kbd></dt>
 <dd><p>Tries to run Singularity images with Docker. This only works if the image is onDocker Hub, i.e. has index docker://</p>
 <p>Default: False</p>
@@ -270,7 +279,8 @@
 </div>
 <div class="section" id="execute-prepare">
 <h3><strong>execute prepare</strong><a class="headerlink" href="#execute-prepare" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">prepare</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="n">descriptor</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">prepare</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span>
+                            <span class="n">descriptor</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
@@ -295,12 +305,16 @@
 <dt><kbd>--imagepath</kbd></dt>
 <dd><p>Path to Singularity image. If not specified, will use current directory.</p>
 </dd>
+<dt><kbd>--sandbox</kbd></dt>
+<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
+<p>Default: False</p>
+</dd>
 </dl>
 </div>
 </div>
 <div class="section" id="execute-simulate">
 <h3><strong>execute simulate</strong><a class="headerlink" href="#execute-simulate" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">simulate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">INPUT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span><span class="p">]</span> <span class="n">descriptor</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">simulate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">INPUT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="n">descriptor</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
@@ -323,6 +337,10 @@
 </dd>
 <dt><kbd>-c, --complete</kbd></dt>
 <dd><p>Include optional parameters.</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--sandbox</kbd></dt>
+<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
 <p>Default: False</p>
 </dd>
 </dl>

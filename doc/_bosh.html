@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -93,6 +93,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="_create.html"><strong>create</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_data.html"><strong>data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="_deprecate.html"><strong>deprecate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_evaluate.html"><strong>evaluate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_example.html"><strong>example</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_execute.html"><strong>execute</strong></a></li>
@@ -174,19 +175,19 @@
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="p">[</span><span class="o">--</span><span class="n">help</span><span class="p">]</span>
-            <span class="p">[{</span><span class="n">create</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">evaluate</span><span class="p">,</span><span class="n">example</span><span class="p">,</span><span class="n">exec</span><span class="p">,</span><span class="n">export</span><span class="p">,</span><span class="n">import</span><span class="p">,</span><span class="n">invocation</span><span class="p">,</span><span class="n">pprint</span><span class="p">,</span><span class="n">publish</span><span class="p">,</span><span class="n">pull</span><span class="p">,</span><span class="n">search</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">validate</span><span class="p">,</span><span class="n">version</span><span class="p">}]</span>
+            <span class="p">[{</span><span class="n">create</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">deprecate</span><span class="p">,</span><span class="n">evaluate</span><span class="p">,</span><span class="n">example</span><span class="p">,</span><span class="n">exec</span><span class="p">,</span><span class="n">export</span><span class="p">,</span><span class="n">import</span><span class="p">,</span><span class="n">invocation</span><span class="p">,</span><span class="n">pprint</span><span class="p">,</span><span class="n">publish</span><span class="p">,</span><span class="n">pull</span><span class="p">,</span><span class="n">search</span><span class="p">,</span><span class="n">test</span><span class="p">,</span><span class="n">validate</span><span class="p">,</span><span class="n">version</span><span class="p">}]</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
 <h3>Positional Arguments<a class="headerlink" href="#Positional Arguments" title="Permalink to this headline">¶</a></h3>
 <dl class="option-list">
 <dt><kbd>function</kbd></dt>
-<dd><p>Possible choices: create, data, evaluate, example, exec, export, import, invocation, pprint, publish, pull, search, test, validate, version</p>
+<dd><p>Possible choices: create, data, deprecate, evaluate, example, exec, export, import, invocation, pprint, publish, pull, search, test, validate, version</p>
 <p>BOUTIQUES COMMANDS</p>
 <p>TOOL CREATION
 * create: create a Boutiques descriptor from scratch.
 * export: export a descriptor to other formats.
-* import: create a descriptor for a BIDS app or update a descriptor from an older version of the schema.
+* import: create a descriptor for a BIDS app or update a descriptor from an older version of the schema. Options: “bids”, “0.4”, “cwl”, “docopt”
 * validate: validate an existing boutiques descriptor.</p>
 <p>TOOL USAGE &amp; EXECUTION
 * example: generate example command-line for descriptor.
@@ -194,6 +195,8 @@
 * exec: launch or simulate an execution given a descriptor and a set of inputs.
 * test: run pytest on a descriptor detailing tests.</p>
 <p>TOOL SEARCH &amp; PUBLICATION
+* deprecate: deprecate a published tool. The tool will still be published and
+usable, but it won’t show in search results.
 * publish: create an entry in Zenodo for the descriptor and adds the DOI created by Zenodo to the descriptor.
 * pull: download a descriptor from Zenodo.
 * search: search Zenodo for descriptors.</p>

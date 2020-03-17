@@ -1,0 +1,20 @@
+
+**deprecate**
+=============
+
+Command-line tool
+^^^^^^^^^^^^^^^^^^^
+
+.. argparse::
+    :module: bosh
+    :func: parser_deprecate
+    :prog: bosh deprecate
+
+
+----------
+
+Python API
+^^^^^^^^^^^^^^
+
+:boutiques.deprecate(\*params):
+   Refer to the `Command-line tool`_ section above

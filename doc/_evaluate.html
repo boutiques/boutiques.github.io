@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="example" href="_example.html" />
-    <link rel="prev" title="data" href="_data.html" /> 
+    <link rel="prev" title="deprecate" href="_deprecate.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,9 +85,11 @@
 <li class="toctree-l1"><a class="reference internal" href="_bosh.html"><strong>bosh</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_create.html"><strong>create</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_data.html"><strong>data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="_deprecate.html"><strong>deprecate</strong></a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>evaluate</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#command-line-tool">Command-line tool</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Positional Arguments">Positional Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#python-api">Python API</a></li>
@@ -172,7 +174,8 @@
 <h1><strong>evaluate</strong><a class="headerlink" href="#evaluate" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">evaluate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="n">descriptor</span> <span class="n">invocation</span> <span class="p">[</span><span class="n">query</span> <span class="p">[</span><span class="n">query</span> <span class="o">...</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">evaluate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span>
+                     <span class="n">descriptor</span> <span class="n">invocation</span> <span class="p">[</span><span class="n">query</span> <span class="p">[</span><span class="n">query</span> <span class="o">...</span><span class="p">]]</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
@@ -186,6 +189,15 @@
 </dd>
 <dt><kbd>query</kbd></dt>
 <dd><p>The query to be performed. Simply request keys from the descriptor (i.e. output-files), and chain together queries (i.e. id=myfile or optional=false) slashes between them and commas connecting them. (i.e. output-files/optional=false,id=myfile). Perform multiple queries by separating them with a space.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="Named Arguments">
+<h3>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h3>
+<dl class="option-list">
+<dt><kbd>--sandbox</kbd></dt>
+<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
+<p>Default: False</p>
 </dd>
 </dl>
 </div>
@@ -212,7 +224,7 @@
         <a href="_example.html" class="btn btn-neutral float-right" title="example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="_data.html" class="btn btn-neutral float-left" title="data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="_deprecate.html" class="btn btn-neutral float-left" title="deprecate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

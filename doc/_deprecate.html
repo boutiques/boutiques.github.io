@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>example &mdash; Boutiques https://github.com/boutiques/boutiques/ documentation</title>
+  <title>deprecate &mdash; Boutiques https://github.com/boutiques/boutiques/ documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="execute" href="_execute.html" />
-    <link rel="prev" title="evaluate" href="_evaluate.html" /> 
+    <link rel="next" title="evaluate" href="_evaluate.html" />
+    <link rel="prev" title="data" href="_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -85,9 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="_bosh.html"><strong>bosh</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_create.html"><strong>create</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_data.html"><strong>data</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="_deprecate.html"><strong>deprecate</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="_evaluate.html"><strong>evaluate</strong></a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>example</strong></a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>deprecate</strong></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#command-line-tool">Command-line tool</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Positional Arguments">Positional Arguments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
@@ -96,6 +94,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#python-api">Python API</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="_evaluate.html"><strong>evaluate</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="_example.html"><strong>example</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_execute.html"><strong>execute</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_exporter.html"><strong>exporter</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_importer.html"><strong>importer</strong></a></li>
@@ -151,13 +151,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li><strong>example</strong></li>
+      <li><strong>deprecate</strong></li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/_example.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/_deprecate.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,30 +170,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="example">
-<h1><strong>example</strong><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="deprecate">
+<h1><strong>deprecate</strong><a class="headerlink" href="#deprecate" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">example</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="n">descriptor</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">deprecate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">by</span> <span class="n">BY</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">zenodo</span><span class="o">-</span><span class="n">token</span> <span class="n">ZENODO_TOKEN</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span>
+                      <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span>
+                      <span class="n">zid</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
 <h3>Positional Arguments<a class="headerlink" href="#Positional Arguments" title="Permalink to this headline">¶</a></h3>
 <dl class="option-list">
-<dt><kbd>descriptor</kbd></dt>
-<dd><p>The Boutiques descriptor as a JSON file, JSON string or Zenodo ID (prefixed by ‘zenodo.’).</p>
+<dt><kbd>zid</kbd></dt>
+<dd><p>Zenodo id of the descriptor to deprecate, prefixed by ‘zenodo.’, e.g. zenodo.123456</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="Named Arguments">
 <h3>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h3>
 <dl class="option-list">
-<dt><kbd>-c, --complete</kbd></dt>
-<dd><p>Include optional parameters.</p>
+<dt><kbd>--by</kbd></dt>
+<dd><p>Zenodo id (e.g., zenodo-1234) of a  descriptor that will supersede the deprecated one.</p>
+</dd>
+<dt><kbd>--zenodo-token</kbd></dt>
+<dd><p>Zenodo API token to use for authentication. If not used, token will be read from configuration file or requested interactively.</p>
+</dd>
+<dt><kbd>-v, --verbose</kbd></dt>
+<dd><p>Print information messages</p>
 <p>Default: False</p>
 </dd>
 <dt><kbd>--sandbox</kbd></dt>
-<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
+<dd><p>use Zenodo’s sandbox instead of production server. Recommended for tests.</p>
 <p>Default: False</p>
 </dd>
 </dl>
@@ -203,7 +211,7 @@
 <div class="section" id="python-api">
 <h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
-<dt class="field-odd">boutiques.example(*params)</dt>
+<dt class="field-odd">boutiques.deprecate(*params)</dt>
 <dd class="field-odd"><p>Refer to the <a class="reference internal" href="#command-line-tool">Command-line tool</a> section above</p>
 </dd>
 </dl>
@@ -218,10 +226,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="_execute.html" class="btn btn-neutral float-right" title="execute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="_evaluate.html" class="btn btn-neutral float-right" title="evaluate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="_evaluate.html" class="btn btn-neutral float-left" title="evaluate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="_data.html" class="btn btn-neutral float-left" title="data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -85,6 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="_bosh.html"><strong>bosh</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_create.html"><strong>create</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_data.html"><strong>data</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="_deprecate.html"><strong>deprecate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_evaluate.html"><strong>evaluate</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_example.html"><strong>example</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="_execute.html"><strong>execute</strong></a></li>
@@ -173,7 +174,8 @@
 <h1><strong>exporter</strong><a class="headerlink" href="#exporter" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">exporter</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">identifier</span> <span class="n">IDENTIFIER</span><span class="p">]</span> <span class="p">{</span><span class="n">carmin</span><span class="p">}</span> <span class="n">descriptor</span> <span class="n">output</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">exporter</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">identifier</span> <span class="n">IDENTIFIER</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span>
+                     <span class="p">{</span><span class="n">carmin</span><span class="p">}</span> <span class="n">descriptor</span> <span class="n">output</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
@@ -196,6 +198,10 @@
 <dl class="option-list">
 <dt><kbd>--identifier</kbd></dt>
 <dd><p>Identifier to use inCARMIN export.</p>
+</dd>
+<dt><kbd>--sandbox</kbd></dt>
+<dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
+<p>Default: False</p>
 </dd>
 </dl>
 </div>

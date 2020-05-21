@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -174,7 +174,10 @@
 <h1><strong>create</strong><a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
+<p><p>Boutiques descriptor creator</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">create</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">image</span> <span class="n">DOCKER_IMAGE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">use</span><span class="o">-</span><span class="n">singularity</span><span class="p">]</span>
+                   <span class="p">[</span><span class="o">--</span><span class="n">camel</span><span class="o">-</span><span class="n">case</span><span class="p">]</span>
                    <span class="n">descriptor</span>
 </pre></div>
 </div>
@@ -194,6 +197,10 @@
 </dd>
 <dt><kbd>--use-singularity, -u</kbd></dt>
 <dd><p>When –docker-image is used. Specify to use singularity to run it.</p>
+<p>Default: False</p>
+</dd>
+<dt><kbd>--camel-case</kbd></dt>
+<dd><p>All input IDs will be written in camelCase.</p>
 <p>Default: False</p>
 </dd>
 </dl>

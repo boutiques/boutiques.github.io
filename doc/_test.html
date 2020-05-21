@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -174,7 +174,9 @@
 <h1><strong>test</strong><a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">test</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="n">descriptor</span>
+<p><p>Perform all the tests defined within the given descriptor</p>
+</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">test</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="n">descriptor</span>
 </pre></div>
 </div>
 <div class="section" id="Positional Arguments">
@@ -191,6 +193,9 @@
 <dt><kbd>--sandbox</kbd></dt>
 <dd><p>Get descriptor from Zenodo’s sandbox instead of production server.</p>
 <p>Default: False</p>
+</dd>
+<dt><kbd>--imagepath</kbd></dt>
+<dd><p>Path to Singularity image. If not specified, will use current directory.</p>
 </dd>
 </dl>
 </div>

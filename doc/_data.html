@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -186,6 +186,8 @@
 <h1><strong>data</strong><a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
+<p><p>Manage execution data collection.</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">data</span> <span class="p">[</span><span class="o">--</span><span class="n">help</span><span class="p">]</span> <span class="p">{</span><span class="n">inspect</span><span class="p">,</span><span class="n">publish</span><span class="p">,</span><span class="n">delete</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -209,6 +211,8 @@
 </div>
 <div class="section" id="data-delete">
 <h3><strong>data delete</strong><a class="headerlink" href="#data-delete" title="Permalink to this headline">¶</a></h3>
+<p><p>Delete data record(s) in cache.</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">data</span> <span class="n">delete</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="nb">int</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -227,6 +231,8 @@
 </div>
 <div class="section" id="data-inspect">
 <h3><strong>data inspect</strong><a class="headerlink" href="#data-inspect" title="Permalink to this headline">¶</a></h3>
+<p><p>Displays contents of cache</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">data</span> <span class="n">inspect</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -242,6 +248,8 @@
 </div>
 <div class="section" id="data-publish">
 <h3><strong>data publish</strong><a class="headerlink" href="#data-publish" title="Permalink to this headline">¶</a></h3>
+<p><p>Publishes record(s) to a data set.</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">data</span> <span class="n">publish</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="n">AUTHOR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">FILE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="nb">int</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span>
                          <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">zenodo</span><span class="o">-</span><span class="n">token</span> <span class="n">ZENODO_TOKEN</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">nexus</span><span class="p">]</span>
                          <span class="p">[</span><span class="o">--</span><span class="n">nexus</span><span class="o">-</span><span class="n">token</span> <span class="n">NEXUS_TOKEN</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">nexus</span><span class="o">-</span><span class="n">org</span> <span class="n">NEXUS_ORG</span><span class="p">]</span>

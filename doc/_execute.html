@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -189,6 +189,8 @@
 <h1><strong>execute</strong><a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="command-line-tool">
 <h2>Command-line tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">¶</a></h2>
+<p><p>Boutiques local executor</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="p">[</span><span class="o">--</span><span class="n">help</span><span class="p">]</span> <span class="p">{</span><span class="n">launch</span><span class="p">,</span><span class="n">simulate</span><span class="p">,</span><span class="n">prepare</span><span class="p">}</span>
 </pre></div>
 </div>
@@ -212,6 +214,8 @@
 </div>
 <div class="section" id="execute-launch">
 <h3><strong>execute launch</strong><a class="headerlink" href="#execute-launch" title="Permalink to this headline">¶</a></h3>
+<p><p>Launches an invocation.</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">launch</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VOLUMES</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span>
                            <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">collection</span><span class="p">]</span>
                            <span class="p">[</span><span class="o">--</span><span class="n">provenance</span> <span class="n">PROVENANCE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">container</span><span class="p">]</span>
@@ -279,6 +283,8 @@
 </div>
 <div class="section" id="execute-prepare">
 <h3><strong>execute prepare</strong><a class="headerlink" href="#execute-prepare" title="Permalink to this headline">¶</a></h3>
+<p><p>Pulls the container image for a given descriptor</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">prepare</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">imagepath</span> <span class="n">IMAGEPATH</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span>
                             <span class="n">descriptor</span>
 </pre></div>
@@ -314,6 +320,8 @@
 </div>
 <div class="section" id="execute-simulate">
 <h3><strong>execute simulate</strong><a class="headerlink" href="#execute-simulate" title="Permalink to this headline">¶</a></h3>
+<p><p>Simulates an invocation.</p>
+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">bosh</span> <span class="n">execute</span> <span class="n">simulate</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">INPUT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">sandbox</span><span class="p">]</span> <span class="n">descriptor</span>
 </pre></div>
 </div>

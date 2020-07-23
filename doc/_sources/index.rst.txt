@@ -44,7 +44,7 @@ can also install directly from GitHub:
 
 ::
 
-   $ pip install "git+https://github.com/boutiques/boutiques@develop#egg=boutiques&subdirectory=tools/python"
+   $ pip install "git+https://github.com/boutiques/boutiques@develop#egg=boutiques"
 
 Tutorial
 ========
